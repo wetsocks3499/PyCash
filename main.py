@@ -1,6 +1,6 @@
 # PyCash - a barebones check registry tool
 import os
-lessRead = "cat PyCash.txt | less"
+lessRead = "less PyCash.txt"
 written = ""
 
 def writeFile():
@@ -9,17 +9,21 @@ def writeFile():
 	f.close()
 def readFile():
 	os.system(lessRead)
-
-print("""
+running = True
+while running == True:
+    print("""
 Welcome to PyCash.
 
 Please select an option:
 [1] Add a payment
 [2] Add a deposit
 [3] View finances""")
-response = input("\n>>> ")
+    response = input("\n>>> ")
 
 # switch cases
-while True:
-	if response == 3:
-		readFile
+
+    if response == "3":
+        running = False
+        readFile()
+    else:
+        print("Error. Unrecognized response.")
