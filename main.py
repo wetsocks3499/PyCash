@@ -24,7 +24,7 @@ Please select an option:
 
 # switch cases
     if response == "1":
-        print("\nPlease enter the amount paid\n>>> ")
+        print("\nPlease enter the dollar amount paid:\n>>> ")
         dollars = input()
         print("\nTo whom was it paid?\n>>> ")
         paymentTo = input()
@@ -34,5 +34,3 @@ Please select an option:
     if response == "3":
         running = False
         readFile()
-    else:
-        print("\nError. Unrecognized response.")
