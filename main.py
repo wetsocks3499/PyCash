@@ -12,7 +12,7 @@ def readFile():
 running = True
 while running == True:
     print("""
-Welcome to PyCash.
+\033[1;33;40m Welcome to PyCash. \033[0m
 
 Please select an option:
 [1] Add a payment
@@ -26,4 +26,4 @@ Please select an option:
         running = False
         readFile()
     else:
-        print("Error. Unrecognized response.")
+        print("\nError. Unrecognized response.")
