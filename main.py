@@ -5,6 +5,7 @@ dollars = ""
 written = ""
 paymentTo = ""
 date = ""
+memo = ""
 
 def writeFile():
 	f = open("PyCash.txt", "a")
@@ -30,8 +31,10 @@ Please select an option:
         print("\nTo whom was it paid?\n>>> ")
         paymentTo = input()
         print("\nOn what date was it paid?\n>>> ")
-        date =input()
-        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date
+        date = input()
+        print("\nWould you like to add a memo? (Press Enter to leave it blank)\n>>> ")
+        memo = input()
+        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date+" ["+memo+"]"
         writeFile()
         running = False
     if response == "3":
