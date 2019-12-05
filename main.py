@@ -4,6 +4,7 @@ lessRead = "less PyCash.txt"
 dollars = ""
 written = ""
 paymentTo = ""
+date = ""
 
 def writeFile():
 	f = open("PyCash.txt", "a")
@@ -28,7 +29,9 @@ Please select an option:
         dollars = input()
         print("\nTo whom was it paid?\n>>> ")
         paymentTo = input()
-        written = "Payment to "+paymentTo+" for $"+dollars
+        print("\nOn what date was it paid?\n>>> ")
+        date =input()
+        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date
         writeFile()
         running = False
     if response == "3":
