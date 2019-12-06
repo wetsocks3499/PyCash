@@ -1,6 +1,0 @@
-
-Deposit for $32 on 1111111 []
-Deposit for $3 on 33[3]
-Deposit for $33 on 12 12 12[33]
-Deposit for $33 on 12 12 22[33]
-Payment to 33 for $12 on 33 [Total: $12]
