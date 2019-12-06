@@ -27,27 +27,27 @@ Please select an option:
 
 # switch cases
     if response == "1":
-        print("\nPlease enter the dollar amount paid:\n>>> ")
-        dollars = input()
-        total -= int(dollars)
-        print("\nTo whom was it paid?\n>>> ")
-        paymentTo = input()
-        print("\nOn what date was it paid?\n>>> ")
-        date = input()
-        print("\nWould you like to add a memo? (Press Enter to leave it blank)\n>>> ")
-        memo = input()
-        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date+" [Total: $"+dollars+"]"+memo
+        print("\nPlease enter the dollar amount paid:")
+        dollars = float(input(">>> "))
+        print("\nTo whom was it paid?")
+        paymentTo = input(">>> ")
+        print("\nOn what date was it paid?")
+        date = input(">>> ")
+        print("\nWould you like to add a memo? (Press Enter to leave it blank)")
+        memo = input(">>> ")
+        total -= float(dollars)
+        written = "\nPayment to "+paymentTo+" for $"+str(dollars)+" on "+date+" [Total: $"+str(total)+"]"+memo
         writeFile()
         running = False
     if response == "2":
-        print("\nPlease enter the dollar amount deposited:\n>>> ")
-        dollars = input()
-        total += int(dollars)
-        print("\nOn what date was it deposited?\n>>> ")
-        date = input()
-        print("\nWould you like to add a memo? (Press Enter to leave it blank)\n>>> ")
-        memo = input()
-        written = "\nDeposit for $"+dollars+" on "+date+" [Total: $"+dollars+"]"+memo
+        print("\nPlease enter the dollar amount deposited:")
+        dollars = float(input(">>> "))
+        total += float(dollars)
+        print("\nOn what date was it deposited?")
+        date = input(">>> ")
+        print("\nWould you like to add a memo? (Press Enter to leave it blank)")
+        memo = input(">>> ")
+        written = "\nDeposit for $"+str(dollars)+" on "+date+" [Total: $"+str(total)+"]"+memo
         writeFile()
         running = False
     if response == "3":
