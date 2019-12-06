@@ -36,7 +36,7 @@ Please select an option:
         date = input()
         print("\nWould you like to add a memo? (Press Enter to leave it blank)\n>>> ")
         memo = input()
-        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date+"["+dollars+"]"+memo
+        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date+" [Total: $"+dollars+"]"+memo
         writeFile()
         running = False
     if response == "2":
