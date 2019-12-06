@@ -1,5 +1,6 @@
 # PyCash - a barebones check registry tool
 import os
+total = 0
 lessRead = "less PyCash.txt"
 dollars = ""
 written = ""
@@ -28,23 +29,25 @@ Please select an option:
     if response == "1":
         print("\nPlease enter the dollar amount paid:\n>>> ")
         dollars = input()
+        total -= int(dollars)
         print("\nTo whom was it paid?\n>>> ")
         paymentTo = input()
         print("\nOn what date was it paid?\n>>> ")
         date = input()
         print("\nWould you like to add a memo? (Press Enter to leave it blank)\n>>> ")
         memo = input()
-        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date+" ["+memo+"]"
+        written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date+"["+dollars+"]"+memo
         writeFile()
         running = False
     if response == "2":
         print("\nPlease enter the dollar amount deposited:\n>>> ")
         dollars = input()
+        total += int(dollars)
         print("\nOn what date was it deposited?\n>>> ")
         date = input()
         print("\nWould you like to add a memo? (Press Enter to leave it blank)\n>>> ")
         memo = input()
-        written = "\nDeposit for $"+dollars+" on "+date+" ["+memo+"]"
+        written = "\nDeposit for $"+dollars+" on "+date+"["+dollars+"]"+memo
         writeFile()
         running = False
     if response == "3":
