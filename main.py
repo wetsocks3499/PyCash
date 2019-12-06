@@ -37,6 +37,16 @@ Please select an option:
         written = "\nPayment to "+paymentTo+" for $"+dollars+" on "+date+" ["+memo+"]"
         writeFile()
         running = False
+    if response == "2":
+        print("\nPlease enter the dollar amount deposited:\n>>> ")
+        dollars = input()
+        print("\nOn what date was it deposited?\n>>> ")
+        date = input()
+        print("\nWould you like to add a memo? (Press Enter to leave it blank)\n>>> ")
+        memo = input()
+        written = "\nDeposit for $"+dollars+" on "+date+" ["+memo+"]"
+        writeFile()
+        running = False
     if response == "3":
         running = False
         readFile()
