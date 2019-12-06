@@ -14,6 +14,13 @@ def writeFile():
 	f.close()
 def readFile():
 	os.system(lessRead)
+def writeTotal():
+    f = open("total", "w")
+    f.write("\n"+str(total))
+def getTotal():
+    with open("total") as f:
+        total = f.readlines()
+
 running = True
 while running == True:
     print("""
@@ -27,6 +34,7 @@ Please select an option:
 
 # switch cases
     if response == "1":
+        getTotal()
         print("\nPlease enter the dollar amount paid:")
         dollars = float(input(">>> "))
         print("\nTo whom was it paid?")
@@ -36,6 +44,7 @@ Please select an option:
         print("\nWould you like to add a memo? (Press Enter to leave it blank)")
         memo = input(">>> ")
         total -= float(dollars)
+        writeTotal()
         written = "\nPayment to "+paymentTo+" for $"+str(dollars)+" on "+date+" [Total: $"+str(total)+"]"+memo
         writeFile()
         running = False
