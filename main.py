@@ -24,7 +24,7 @@ def getTotal():
 running = True
 while running == True:
     print("""
-\033[1;33;40m Welcome to PyCash. \033[0m
+\033[1;33;40m Welcome to PyCash version 1.0 \033[0m
 
 Please select an option:
 [1] Add a payment
@@ -45,7 +45,7 @@ Please select an option:
         memo = input(">>> ")
         total -= float(dollars)
         writeTotal()
-        written = "\nPayment to "+paymentTo+" for $"+str(dollars)+" on "+date+" [Total: $"+str(total)+"]"+memo
+        written = "\nPayment to "+paymentTo+" for $"+str(dollars)+" on "+date+memo
         writeFile()
         running = False
     if response == "2":
@@ -56,7 +56,7 @@ Please select an option:
         date = input(">>> ")
         print("\nWould you like to add a memo? (Press Enter to leave it blank)")
         memo = input(">>> ")
-        written = "\nDeposit for $"+str(dollars)+" on "+date+" [Total: $"+str(total)+"]"+memo
+        written = "\nDeposit for $"+str(dollars)+" on "+date+memo
         writeFile()
         running = False
     if response == "3":
