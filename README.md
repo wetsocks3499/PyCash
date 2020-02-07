@@ -1,6 +1,8 @@
 # PyCash
 a barebones check registry tool
 
+(try it out!)
+[![Run on Repl.it](https://repl.it/badge/github/ydissac/PyCash)](https://repl.it/github/ydissac/PyCash)
 
 # Requirements: 
 python and less
